@@ -1,0 +1,10 @@
+{
+    "full_name": "Author name",
+    "email": "your@email.com",
+    "project_name": "QMD Flask App",
+    "project_short_description": "",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "project_core_dir": "{{ cookiecutter.project_slug }}",
+    "create_author_file": "y",
+    "open_source_license": ["MIT", "BSD", "ISCL", "Apache Software License 2.0", "Not open source"]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "{{cookiecutter.project_name}}",
+  "authors": [
+    "{{cookiecutter.full_name}} <{{cookiecutter.email}}>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "{{cookiecutter.project_core_dir}}/static/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}
