@@ -1,5 +1,5 @@
 from flask import Blueprint
-from core.client_module.views import get_views
+from {{cookiecutter.project_core_dir}}.client_module.views import get_views
 
 kwargs = {
     'static_folder': 'static',
