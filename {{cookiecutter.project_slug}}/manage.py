@@ -15,8 +15,8 @@ def cli():
 @cli.command()
 def init():
     """Initialize application"""
-    from designer import db
-    from designer.models import user_datastore
+    from {{cookiecutter.project_core_dir}} import db
+    from {{cookiecutter.project_core_dir}}.models import user_datastore
     from flask_security import utils
     db.create_all()
 
