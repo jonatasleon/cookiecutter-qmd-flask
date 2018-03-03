@@ -1,5 +1,5 @@
 from flask import Flask
-{% if {{cookiecutter.admin_module}} in ['yes', 'y'] -%}
+{% if cookiecutter.admin_module in ['yes', 'y'] -%}
 from flask_admin import Admin
 {% endif %}
 from flask_sqlalchemy import SQLAlchemy
@@ -10,7 +10,7 @@ from flask_security import Security
 from {{cookiecutter.project_core_dir}}.config import DefaultConfig
 
 
-{% if {{cookiecutter.admin_module}} in ['yes', 'y'] -%}
+{% if cookiecutter.admin_module in ['yes', 'y'] -%}
 admin = Admin(name='{{cookiecutter.project_name}} Admin', template_mode='bootstrap3')
 {% endif %}
 db = SQLAlchemy()
@@ -33,7 +33,7 @@ def create_app(cfg_file=''):
     from {{cookiecutter.project_core_dir}}.client_module import site
     app.register_blueprint(site)
 
-    {% if {{cookiecutter.admin_module}} in ['yes', 'y'] -%}
+    {% if cookiecutter.admin_module in ['yes', 'y'] -%}
     from {{cookiecutter.project_core_dir}}.admin_module import get_views
     admin.init_app(app)
     admin.add_views(*get_views()))
