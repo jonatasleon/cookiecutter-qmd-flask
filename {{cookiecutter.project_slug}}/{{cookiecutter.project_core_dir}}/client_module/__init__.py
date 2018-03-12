@@ -1,5 +1,6 @@
 from flask import Blueprint
 from {{cookiecutter.project_core_dir}}.client_module.views import get_views
+from {{cookiecutter.project_core_dir}}.helpers import register_views
 
 kwargs = {
     'static_folder': 'static',
@@ -9,5 +10,4 @@ kwargs = {
 }
 site = Blueprint('site', __name__, **kwargs)
 
-for view in get_views():
-    site.add_url_rule('/', view_func=view)
+register_views(site, get_views())

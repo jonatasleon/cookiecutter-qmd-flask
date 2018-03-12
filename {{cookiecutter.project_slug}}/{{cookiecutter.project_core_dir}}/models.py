@@ -51,4 +51,5 @@ class User(db.Model, UserMixin):
 
 user_datastore = SQLAlchemySessionUserDatastore(db.session, User, Role)
 
+
 # Add your own models

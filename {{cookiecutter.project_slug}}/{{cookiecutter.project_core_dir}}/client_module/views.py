@@ -1,16 +1,21 @@
 from flask import render_template
 from flask_security import login_required
-from flask.views import MethodView
+from flask_classy import FlaskView
 
 
 def get_views():
+    # You can append new views here
     return [
-        IndexView.as_view('index'),
+        IndexView(),
     ]
 
 
-class IndexView(MethodView):
+class IndexView(FlaskView):
+    route_base = '/'
 
-    @login_required
-    def get(self):
+    # @login_required  # You can set index page as login required
+    def index(self):
         return render_template('index.html')
+
+
+# Add your own views here
