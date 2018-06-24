@@ -1,5 +1,5 @@
 from flask_security import RoleMixin, UserMixin, SQLAlchemySessionUserDatastore
-from {{cookiecutter.project_core_dir}} import db
+from {{cookiecutter.project_core_dir}}.extensions import db
 
 role_users = db.Table(
     'role_users',

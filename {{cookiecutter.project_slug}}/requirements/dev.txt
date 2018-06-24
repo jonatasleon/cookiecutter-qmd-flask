@@ -1,0 +1,6 @@
+# Import project dependecies
+-r prod.txt
+
+# Test dependencies
+pytest-flask==0.10.0
+watchdog==0.8.3

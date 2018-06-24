@@ -25,5 +25,5 @@ if __name__ == '__main__':
         remove_file('conftest.py')
         remove_dir('tests/')
 
-    if '{{ cookiecutter.admin_module }}' not in ['y', 'yes']:
-        remove_dir('{{cookiecutter.project_core_dir}}/admin_module')
+    if '{{ cookiecutter.admin }}' not in ['y', 'yes']:
+        remove_dir('{{cookiecutter.project_core_dir}}/admin')

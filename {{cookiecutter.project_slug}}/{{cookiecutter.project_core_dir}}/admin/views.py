@@ -3,7 +3,8 @@ from flask_babelex import gettext, ngettext
 from flask_security import current_user, utils
 from wtforms.fields import PasswordField
 
-from {{cookiecutter.project_core_dir}} import db, models
+from {{cookiecutter.project_core_dir}}.extensions import db
+from {{cookiecutter.project_core_dir}} import models
 
 
 def get_views():
